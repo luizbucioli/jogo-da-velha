@@ -15,28 +15,9 @@ body{
     cursor: pointer;
     color: #eee;
 }
-.jogador{
+.jogador, .vencedor{
     font-size: 30px;
     margin-top: 0.625rem;
-
-}
-.vencedor{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 15vh;
-    width: 50vh;
-    font-size: 30px;
-    padding: 0.5rem;
-    margin-top: 0.625rem;
-    background-color: #c9c8c8;
-    border: 1px solid #868686;
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.267);
-    border-radius: 10px;
-    position: absolute;
-    top: 20%;
-    left: 50%;
-    transform: translate(-50%, -50%);
 }
 
 button{
