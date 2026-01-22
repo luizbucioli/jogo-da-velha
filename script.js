@@ -82,6 +82,10 @@ function checaVencedor(){
         mudarVencedor(quadrado3)
         return;
     }
+    if(chacaSequeciaEmpate(quadrado1, quadrado2, quadrado3, quadrado4, quadrado5, quadrado6, quadrado7, quadrado8, quadrado9)){
+        jogoEmpatado();
+        return;
+    }
 }
 
 function mudarVencedor(quadrado){
@@ -106,7 +110,6 @@ function chacaSequecia(quadrado1, quadrado2, quadrado3){
     return eigual; 
 }
 
-
 function reiniciar(){
     jogoEncerrado = false;
     vencedorSelecionado.innerHTML = '';
@@ -117,4 +120,19 @@ function reiniciar(){
         quadrado.innerHTML = '-';
     }
     mudarJogador('X');
+}
+
+
+function chacaSequeciaEmpate(quadrado1, quadrado2, quadrado3, quadrado4, quadrado5, quadrado6, quadrado7, quadrado8, quadrado9){
+    let eigual = false;
+
+    if(quadrado1.innerHTML !== '-' && quadrado2.innerHTML !== '-' && quadrado3.innerHTML !=='-' && quadrado4.innerHTML !== '-' && quadrado5.innerHTML !== '-' && quadrado6.innerHTML !== '-' && quadrado7.innerHTML !== '-' && quadrado8.innerHTML !== '-' && quadrado9.innerHTML !== '-'){
+        eigual = true;
+    }
+
+    return eigual; 
+}
+function jogoEmpatado(){
+    jogoEncerrado = true;
+    vencedorSelecionado.innerHTML = 'Jogo Empatado!!';
 }
